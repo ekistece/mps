@@ -171,7 +171,8 @@ class Config(object):
     """ Holds various configuration values. """
 
     PLAYER = "mplayer"
-    PLAYERARGS = "-nolirc -prefer-ipv4"
+    #Removed -nolirc here because it fucked up my audio using ALSA on void linux
+    PLAYERARGS = "-prefer-ipv4"
     COLOURS = False if mswin and not has_colorama else True
     CHECKUPDATE = True
     SHOW_MPLAYER_KEYS = True
